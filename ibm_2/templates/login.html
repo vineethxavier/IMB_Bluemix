@@ -1,0 +1,53 @@
+<html>
+<head>
+<title> login</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+</head>
+
+<body >
+<div class="container">
+	<div class="jumbotron">
+		<h1>CLOUD 6331</h3>
+			<pre><a href="/loginindex"> Logout</a>						</pre>
+
+	</div>
+	<h4>hi,{{ session['username'] }} </h4>
+
+    <fieldset class="datagrid">
+    	<h1 style="color:blue;">Cloud Computing</h1>
+    </fieldset>
+    </br>
+
+
+
+	
+	<form action="/loadfile" method="POST" enctype="multipart/form-data">
+	<div class="row">
+    	<div class="col-sm-4">
+     	 Upload Your File
+    	</div>
+    	<div class="col-sm-4">
+    	  	<input type="file" name="infile"/>
+   	 	</div>
+    	<div class="col-sm-4">
+    	  <input type="submit" name="submit" value="submit"/>
+    	</div>
+	</div>
+  
+
+</br>
+    <fieldset class="datagrid"><legend>File Upload</loadfile></fieldset>
+    
+		<ul>
+			<li>
+			<form method="POST" action="/DownloadDeleteFile" enctype="multipart/form-data">
+			
+			<input id="downloadfile" type="submit" name="submit" value="download" ></input>
+			<input id="deletefile" type="submit" name="submit" value="delete"></input>
+			</form>
+			</li>
+			
+		</ul>
+</div>   
+</body>	
+</html>
