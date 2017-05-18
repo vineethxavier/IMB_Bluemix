@@ -1,0 +1,20 @@
+<html>
+<head>
+<title> file upload</title>
+</head>
+
+<body>
+	<form action="/loadfile" method="post" enctype="multipart/form-data">
+		<input type="file" name="infile"/>
+		<input type="submit" name="submit" value="submit"/>		
+	</form>
+	
+	<a href="/listfiles"> clickme</a>
+	
+	{% for item in session.pop('my_file_list', []) %}
+			{{ item }}
+			{% endfor %}⁠⁠⁠⁠
+	
+	
+</body
+</html>

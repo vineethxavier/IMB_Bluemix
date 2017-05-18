@@ -1,0 +1,22 @@
+<html>
+<head><title>Listing files</title></head>
+<body>
+
+<h3>list files</h3>
+
+
+
+<table>
+	<tr>
+		<th>File name</th>
+		{% for item in session.pop('my_file_list', []) %}
+			<h3> =>  </h3>{{ item }}<br/>
+			{% endfor %}
+	% for item in session.pop('my_file_byte', []) %} <!-- added-->
+			<h3> =>  </h3>{{ item }}<br/> <!-- added-->
+			{% endfor %} <!-- added-->
+	</tr>
+</table>
+</body>
+</html>
+
